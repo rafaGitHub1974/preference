@@ -32,12 +32,14 @@ Si ya tienes todo listo ahora debemos compilar los componentes. Tenemos 2 entorn
 
 ```bash
 # Crea un servidor local para que puedas probar tus componentes
-```
-
 npm run serve
 
 ```
 
 # Genera los javascripts
+
 npm run build
+
+```
+
 ```
