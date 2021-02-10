@@ -36,10 +36,8 @@ npm run serve
 
 ```
 
+```bash
 # Genera los javascripts
-
 npm run build
-
-```
 
 ```
