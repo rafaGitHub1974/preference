@@ -145,7 +145,6 @@ export default {
       this.finalizedProcess = false
       axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
           // handle success
-          console.log(response.data)
           this.users = response.data
         })
         .catch(error => {
