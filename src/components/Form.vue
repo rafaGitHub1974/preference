@@ -142,7 +142,6 @@ export default {
       this.$refs.form.resetValidation()
     },
     getUsers () {
-      this.finalizedProcess = false
       axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
           // handle success
           this.users = response.data
