@@ -124,9 +124,12 @@ export default {
   created () {
     this.getUsers()
   },
+  mounted () {    
+    this.dataForm = (localStorage.getItem('localDataForm')) ? JSON.parse(localStorage.getItem('localDataForm')) : {}
+  },  
   methods: {
     saveForm () {
-      localStorage.setItem('dataForm', JSON.stringify(this.dataForm))
+      localStorage.setItem('localDataForm', JSON.stringify(this.dataForm))
       console.log('Se han modificado datos del formulario: ', this.dataForm)
     },
     validate () {
@@ -139,6 +142,7 @@ export default {
       this.$refs.form.resetValidation()
     },
     getUsers () {
+      this.finalizedProcess = false
       axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
           // handle success
           console.log(response.data)
